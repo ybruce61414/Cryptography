@@ -8,14 +8,17 @@ This is my pure python implementation of ASE 128bit encryption algorithm in ECB 
 ## ECB mode
 Electronic Code Book (ECB) is a mode of operation for a block cipher. It requires its input(plaintext) to be an exact multiple of the block size, and each block is encrypted separately. 
 
+The usage of our implementation is straightforward, and it looks like this:
+
 ```python
 #simple example of encrypting plaintext with ECB mode
 
-message = 'Test??√ cryptography'
+message = 'Test√ cryptography'
+#128-bit key(hex form)
 key_32hex = '5468617473206D79204B756E67204675'
 
 a = AES(mode='ecb')
-# encrypt message with your key
+# encrypt message with the key
 ciphertext = a.encrypt(plaintext,key_32hex)
 # decrypt ciphertext  with the same key
 plaintext = a.decrypt(ciphertext,key_32hex)
