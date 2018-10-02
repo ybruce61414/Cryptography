@@ -19,10 +19,32 @@ key_32hex = '5468617473206D79204B756E67204675'
 
 a = AES(mode='ecb')
 # encrypt message with the key
-ciphertext = a.encrypt(plaintext,key_32hex)
+ciphertext = a.encrypt(message,key_32hex)
 # decrypt ciphertext  with the same key
 plaintext = a.decrypt(ciphertext,key_32hex)
 
 ```
 
 ## CBC mode
+Cipher Block Chaining (CBC) is a mode of operation for a block cipher. Each block of plaintext is XORed with the previous ciphertext block before being encrypted, and an initialization vector must be used in the first block.
+
+```python
+#simple example of encrypting plaintext with CBC mode
+
+message = 'Test√ cryptography'
+#128-bit key(hex form)
+key_32hex = '5468617473206D79204B756E67204675'
+#initialization vector 128-bit
+iv = '3468617473206D79204B756E67204675'
+
+
+b = AES(mode='cbc')
+# encrypt message with the key
+ciphertext = b.encrypt(message,key_32hex,iv)
+# decrypt ciphertext  with the same key
+plaintext = b.decrypt(ciphertext,key_32hex,iv)
+
+```
+
+
+
