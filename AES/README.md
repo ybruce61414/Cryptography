@@ -6,7 +6,7 @@ This is my pure python implementation of ASE 128bit encryption algorithm in ECB 
 3. Decryption for a single block(128 bits)
 
 ## ECB mode
-Electronic Code Book (ECB) is a mode of operation for a block cipher. It requires its input(plaintext) to be an exact multiple of the block size, and each block is encrypted separately. 
+**Electronic Code Book** (ECB) is a mode of operation for a block cipher. It requires its input(plaintext) to be an exact multiple of the block size, and each block is encrypted separately. 
 
 The usage of our implementation is straightforward, and it looks like this:
 
@@ -26,7 +26,7 @@ plaintext = a.decrypt(ciphertext,key_32hex)
 ```
 
 ## CBC mode
-Cipher Block Chaining (CBC) is a mode of operation for a block cipher. Each block of plaintext is XORed with the previous ciphertext block before being encrypted, and an initialization vector must be used in the first block.
+**Cipher Block Chaining** (CBC) is a mode of operation for a block cipher. Each block of plaintext is XORed with the previous ciphertext block before being encrypted, and an **initialization vector** must be used in the first block.
 
 ```python
 #simple example of encrypting plaintext with CBC mode
@@ -36,8 +36,7 @@ message = 'Test√ cryptography'
 key_32hex = '5468617473206D79204B756E67204675'
 #initialization vector 128-bit
 iv = '3468617473206D79204B756E67204675'
-
-
+s
 b = AES(mode='cbc')
 # encrypt message with the key
 ciphertext = b.encrypt(message,key_32hex,iv)
