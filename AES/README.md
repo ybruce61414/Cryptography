@@ -44,6 +44,10 @@ ciphertext = b.encrypt(message,key_32hex,iv)
 plaintext = b.decrypt(ciphertext,key_32hex,iv)
 
 ```
+Note:
+* All plaintext is encoded using UTF-8.
+* PKCS7 padding is used for making the input of cipher block be an exact multiple of the block size.
+
 
 
 
