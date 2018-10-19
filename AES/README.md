@@ -1,5 +1,5 @@
 # AES-128 Implementation in Pure Python
-This is my pure python implementation of ASE 128bit encryption algorithm in ECB and CBC modes. For simplicity, we divide it into three sections written as modules and ultimately combine them into [one](https://github.com/ybruce61414/Cryptography/blob/master/AES/AES_final.ipynb).
+This is my pure python implementation of AES 128-bit encryption algorithm in ECB and CBC modes. For simplicity, we divide it into three sections written as modules and ultimately combine them into [one](https://github.com/ybruce61414/Cryptography/blob/master/AES/AES_final.ipynb).
 
 1. Key expansion
 2. Encryption for a single block(128 bits)
