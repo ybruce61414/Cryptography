@@ -47,7 +47,7 @@ plaintext = b.decrypt(ciphertext,key_16hex,iv)
 ```
 
 ## Triple DES
-Triple DES (3DES) is a symmetric-key block cipher, which applies the DES cipher algorithm three times to each data block. It is based on an encrypt?decrypt?encrypt process and has three 64-bit keys. 
+Triple DES (3DES) is a symmetric-key block cipher, which applies the DES cipher algorithm three times to each data block. It is based on an encrypt-decrypt-encrypt process and has three 64-bit keys. 
 
 Now, Triple DES comes in three flavors:
 1. *k1* = *k3*: 3DES has 128-bit key.
