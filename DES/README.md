@@ -1,5 +1,5 @@
 # DES Implementation in Pure Python
-This is my pure python implementation of  DES 64-bit encryption algorithm in ECB and CBC modes. For simplicity, we divide it into four sections written as modules and ultimately combine them into [one](https://github.com/ybruce61414/Cryptography/blob/master/DES/DES_final.ipynb).
+This is my pure python implementation of  DES 64-bit encryption algorithm in ECB and CBC modes. For the sake of simplicity, we divide it into four sections written as modules and ultimately combine them into [one](https://github.com/ybruce61414/Cryptography/blob/master/DES/DES_final.ipynb).
 
 1. Sub-key generation
 2. Mangler function
@@ -35,6 +35,7 @@ plaintext = a.decrypt(ciphertext,key_16hex)
 message = 'Test√ cryptography'
 #64-bit key(hex form) 
 key_16hex = '0123456789ABCDEF'
+
 #64-bit initialization vector 
 iv = '0123456789ABCDEF'
 
@@ -47,7 +48,7 @@ plaintext = b.decrypt(ciphertext,key_16hex,iv)
 ```
 
 ## Triple DES
-Triple DES (3DES) is a symmetric-key block cipher, which applies the DES cipher algorithm three times to each data block. It is based on an encrypt-decrypt-encrypt process and has three 64-bit keys. 
+Triple DES (3DES) is a symmetric-key block cipher, which applies the DES cipher algorithm three times to each data block. It is based on an encrypt-decrypt-encrypt process and has three 64-bit keys(*k1*,*k2*,*k3*). 
 
 Now, Triple DES comes in three flavors:
 1. *k1* = *k3*: 3DES has 128-bit key.
@@ -72,7 +73,7 @@ a = DES(mode='ecb')
 a_ecb_ciphertext = a.encrypt(message,k1,k2,k3)
 a_ecb_plaintext = a.decrypt(a_ecb_ciphertext,k1,k2,k3)
 
-#CBC mode
+# CBC mode
 b = DES(mode='cbc')
 b_cbc_ciphertext = b.encrypt(message,k1,k2,k3,iv)
 b_cbc_plaintext = b.decrypt(b_cbc_ciphertext,k1,k2,k3,iv)
