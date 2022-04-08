@@ -1,4 +1,4 @@
-# DES Implementation in Pure Python
+# DES Implementation in Python
 This is my pure python implementation of  DES 64-bit encryption algorithm in ECB and CBC modes. For the sake of simplicity, we divide it into four sections written as modules and ultimately combine them into [one](https://github.com/ybruce61414/Cryptography/blob/master/DES/DES_final.ipynb).
 
 1. Sub-key generation
@@ -14,7 +14,7 @@ The usage of our implementation is straightforward, and it looks like this:
 ```python
 #simple example of encrypting plaintext with ECB mode
 
-message = 'Test√ cryptography'
+message = 'Test√É cryptography'
 #64-bit key(hex form)
 key_16hex = '0123456789ABCDEF'
 
@@ -32,7 +32,7 @@ plaintext = a.decrypt(ciphertext,key_16hex)
 ```python
 #simple example of encrypting plaintext with CBC mode
 
-message = 'Test√ cryptography'
+message = 'Test√É cryptography'
 #64-bit key(hex form) 
 key_16hex = '0123456789ABCDEF'
 
@@ -58,7 +58,7 @@ Now, Triple DES comes in three flavors:
 ```python
 #simple example of 3DES in ECB & CBC modes
 
-message = 'Test√ cryptography'
+message = 'Test√É cryptography'
 
 #64-bit key(hex form) 
 key_1= '0123456789ABCDEF'
