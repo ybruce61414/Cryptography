@@ -1,4 +1,4 @@
-# AES-128 Implementation in Pure Python
+# AES-128 Implementation in Python
 This is my pure python implementation of AES 128-bit encryption algorithm in ECB and CBC modes. For the sake of simplicity, we divide it into three sections written as modules and ultimately combine them into [one](https://github.com/ybruce61414/Cryptography/blob/master/AES/AES_final.ipynb).
 
 1. Key expansion
@@ -13,7 +13,7 @@ The usage of our implementation is straightforward, and it looks like this:
 ```python
 #simple example of encrypting plaintext with ECB mode
 
-message = 'Test√ cryptography'
+message = 'Test√É cryptography'
 #128-bit key(hex form)
 key_32hex = '5468617473206D79204B756E67204675'
 
@@ -31,7 +31,7 @@ plaintext = a.decrypt(ciphertext,key_32hex)
 ```python
 #simple example of encrypting plaintext with CBC mode
 
-message = 'Test√ cryptography'
+message = 'Test√É cryptography'
 #128-bit key(hex form) 
 key_32hex = '5468617473206D79204B756E67204675'
 #128-bit initialization vector 
